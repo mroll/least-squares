@@ -1,6 +1,6 @@
 #!/usr/local/bin/maple -q
 
-# Gram-Schmidt process for generating orthonormal polynomials
+# Gram-Schmidt process for generating orthogonal polynomials
 #
 
 if not assigned(n) then n := 10; end if:
@@ -59,8 +59,8 @@ genphis := proc(n)
     local i;
     for i from 1 to n do
         phi_k(i);
-    end do:
-end proc:
+    end do;
+end proc;
 
 print(n);
 genphis(n):
@@ -81,3 +81,5 @@ end do:
 if failures = 0 then
     printf("success: the set of polynomials forms an orthonormal space\n");
 end if:
+
+memos(4);
